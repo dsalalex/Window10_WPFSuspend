@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfAppMVVM_TestSuspend3.ViewModels;
 
 namespace WpfAppMVVM_TestSuspend3
 {
@@ -20,9 +21,13 @@ namespace WpfAppMVVM_TestSuspend3
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainWindowViewModel viewModel;
+
         public MainWindow()
         {
             InitializeComponent();
+            viewModel = new MainWindowViewModel();
+            this.DataContext = viewModel;
         }
     }
 }

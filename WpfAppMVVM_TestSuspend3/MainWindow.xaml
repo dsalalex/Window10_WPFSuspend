@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="{Binding MyString}" HorizontalAlignment="Center"/>
+            <Button Content="Trigger the error!!"
+                    Command="{Binding TriggerErrorCommand}"/>
+        </StackPanel>
     </Grid>
 </Window>
